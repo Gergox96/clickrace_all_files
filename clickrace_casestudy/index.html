@@ -8,20 +8,19 @@
     <link rel="stylesheet" href="css/design.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 </head>
-<!--///////////////////HEADER-->
 
 <body>
     <div class="featured">
         <div class="featuredText">
             <h1>Click Race!</h1>
-            <h2>The internet version of Hungry Hippos...</h2>
+            <h2>Place your bets, let the races begin...</h2>
         </div>
     </div>
     <!--    //////////////////SECTION 1-->
     <div class="col3 md3 firstblock">
-        <h3>The title of your intro paragraph.
+        <h3>Prototype
         </h3>
-        <h3>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</h3>
+        <p>The Click Race prototype has taken some directional shifts since the ideation phase of the project. Initially, 4 users were supposed to connect to the web page and select a colour. <br>The user would then become locked in and ONLY have access to clicking on their colour of choice. All 4 users would then click as fast as they can to race against the other opponents.</p>
     </div>
     <div class="grid padded">
         <div class="twothird col">
@@ -33,7 +32,13 @@
         </div>
 
         <div class="col3 md3">
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks. </p>
+            <p>Here is a brief look at the system map that explains how each component of code and hardware work together to create a singular product, or in this case, merely a prototype.<br><br></p>
+            <ul><a>1 of 4 users click on a colour</a></ul>
+                <ul><a>Sends data to Adafruit IO</a></ul>
+                <ul><a>Adafruit sends data to Feather Huzzah</a></ul>
+                <ul><a>Feather Huzzah rotates Servo Motors</a></ul>
+                <ul><a>1 of 4 users shall win</a></ul>
+                <ul><a>System Resets</a></ul>
         </div>
     </div>
 
@@ -41,134 +46,135 @@
         <div class="twothird col">
 
             <picture>
-                <source media="(max-width: 600px)" srcset="img/small.jpg">
-                <source media="(max-width: 1024px)" srcset="img/medium.jpg">
-                <img src="img/large.jpg" alt="landscape" class="rsp">
+                <source media="(max-width: 600px)" srcset="img/small-proto1.jpg">
+                <source media="(max-width: 1024px)" srcset="img/medium-proto1.jpg">
+                <img src="img/large-proto1.jpg" alt="landscape" class="rsp">
             </picture>
 
         </div>
 
         <div class="col3 md3">
-            <p>The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-            <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. </p>
+            <p>Here are two screenshots from the prototype building process. The second screenshot is closer to the final version, but I wanted to run you through my thought process with this one. <br><br> Click Race was intended to be like the internet version of Hungry Hungry Hippos, all 4 users would be clicking like crazy until somebody wins, however, that idea changed through the process.<br><br>Here you can clearly see 4 buttons with no other options. Simply just click away at your colour and the code takes care of the rest.
+            </p>
         </div>
     </div>
 
     <div class="grid padded">
         <div class="twothird col">
             <picture>
-                <source media="(max-width: 600px)" srcset="img/small.jpg">
-                <source media="(max-width: 1024px)" srcset="img/medium.jpg">
-                <img src="img/large.jpg" class="rsp">
+                <source media="(max-width: 600px)" srcset="img/small-proto2.jpg">
+                <source media="(max-width: 1024px)" srcset="img/medium-proto2.jpg">
+                <img src="img/large-proto2.jpg" class="rsp">
             </picture>
 
         </div>
 
         <div class="col3 md3">
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+            <p>In this version however, you'll quickly note that there is a new button labelled, "Erase Bet". I realised that there would most likely be complications and latency issues with 4 different users constantly clicking on buttons. So to solve this issue, I reshaped the idea of Click Race around race betting.<br><br>
+            With the addition of bet placing, there is now an obvious, "Start" and "Stop" buttons. This simplifies the code to a boolean level where the circuit only has to thing, <br><br>"Okay, is the data a 1 or a 0? 1=start, 0=stop."
+            </p>
         </div>
     </div>
     <!--    //////////////////SECTION 2-->
-    <div class="col3 md3">
-        <h3>Title for your next section content.
+    <div class="col3 md3 secondblock">
+        <h3>The Building Phase
         </h3>
-        <h3>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </h3>
+        <p>Here is a brief look at the building process behind Click Race! After ordering 4 Continous Servo Motors with Wheels from Amazon and a 1000mAh 3.7v battery from Canada Robotix, it was just a waiting game for the parts. <br>After they had finally arrived, I quickly got to work on the circuit. Here it is...</p>
     </div>
 
-    <div class="clearfix">
+    <div class="clearfix moveRight">
         <div class="img-container">
-            <img src="img/landscape.jpg" style="width:100%">
+            <img src="img/large-process1.jpg" style="width:100%">
         </div>
         <div class="img-container">
-            <img src="img/landscape.jpg" style="width:100%">
+            <img src="img/large-process2.jpg" style="width:100%">
         </div>
         <div class="img-container">
-            <img src="img/landscape.jpg" style="width:100%">
+            <img src="img/large-process3.jpg" style="width:100%">
         </div>
     </div>
 
     <div class="grid padded">
         <div class="twothird col">
-            <p><i><q>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</q></i></p>
+            <p></p>
         </div>
     </div>
     <div class="grid padded">
         <div class="twothird col">
             <div class="container">
-                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/jBsXlZ7EqUY"></iframe>
             </div>
         </div>
 
         <div class="col3 md3">
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-        </div>
-    </div>
-
-    <div class="grid padded">
-        <div class="twothird col">
-            <div class="container">
-                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-            </div>
-
-        </div>
-
-        <div class="col3 md3">
-            <p>The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+            <p>In this video, I am just simply checking if all of my Servo Motors are working as intended. I was testing out a piece of code that would tell the Motors to rotate 180 degrees clock-wise and then counter clock-wise.</p>
         </div>
     </div>
 
     <div class="grid padded">
         <div class="twothird col">
             <div class="container">
-                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/nEBbDsfpIYA"></iframe>
             </div>
 
         </div>
 
         <div class="col3 md3">
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+            <p>In this video, I changed the code to work with my P5.js web page. I wanted to keep all the variables and connections in the code from the guide togther, so I only implemented small parts of my own code over the guide's code. Therefore, I was only able to get one Servo Motor working for now, however, the Motor continously spins with a delay between rotations. I am assuming the Arduino code is holding the data value as "1". My next challenge is to get the P5.js sketch to change that data value to a "0".</p>
         </div>
     </div>
 
-    <!--    /////////-->
-    <!--    //////////////////SECTION 2-->
-    <div class="col3 md3">
-        <h3>Title for your next section content.
+    <div class="grid padded">
+        <div class="twothird col">
+            <div class="container">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/b3H6P7nY5Sc"></iframe>
+            </div>
+
+        </div>
+
+        <div class="col3 md3">
+            <p>In this video, I attempt and succeed at getting the Guide 2 from class to work. As you can see, the button affects the webpage.</p>
+        </div>
+    </div>
+<!--------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------->
+        <div class="col3 md3 firstblock">
+        <h3>The Code
         </h3>
-        <h3>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h3>
+        <p>Seemed easy enough to follow with YouTube guides and official guides from class. It was all going so well until I could not get my P5.js web sketch to communicate with my Arduino sketch. I found immediate success with getting the Feather Huzzah to communicate with a P5.js sketch, but not the other way around. I will be attempting to connect with MQTT rather than an API next time. To my knowledge there are no errors in the code, I have tried what I can but to no avail I cannot get the code to work as intended.</p>
+    </div>
+    <div class="grid padded">
+        <div class="twothird col">
+            <picture>
+                <source media="(max-width: 600px)" srcset="img/medium-code1.jpg">
+                <source media="(max-width: 1024px)" srcset="iimg/medium-code1.jpg">
+                <img src="img/large-code1.jpg" alt="landscape" class="rsp">
+            </picture>
+        </div>
 
-    </div>
-    <img src="img/landscape.jpg" style="width:100%">
-    <div class="col3 md3">
-        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
-    </div>
-    <div class="clearfix">
-        <div class="img-container">
-            <img src="img/landscape.jpg" style="width:100%">
+        <div class="col3 md3">
+            <p>Here is a screenshot of my P5.js sketch, both the HTML side and the JavaScript side. Everything looks as if it should work.</p>
         </div>
-        <div class="img-container">
-            <img src="img/landscape.jpg" style="width:100%">
-        </div>
-        <div class="img-container">
-            <img src="img/landscape.jpg" style="width:100%">
-        </div>
-    </div>
-
-    <div class="col3 md3">
-        <h3>Title for your final section content.
-        </h3>
-        <h3>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </h3>
     </div>
 
     <div class="grid padded">
         <div class="twothird col">
-            <div class="container">
-                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-            </div>
+
+            <picture>
+                <source media="(max-width: 600px)" srcset="img/img/medium-code2.jpg">
+                <source media="(max-width: 1024px)" srcset="img/medium-code2.jpg">
+                <img src="img/large-code2.jpg" alt="landscape" class="rsp">
+            </picture>
+
         </div>
+
         <div class="col3 md3">
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+            <p>Here is the last screenshot for as far as the code is concerned. This is the Feather Huzzah side of things. In this screenshot you can see I have commented out my previous code that I wanted to work for Click Race! and was last attempting to get Guide 3 from class to work oncemore. <br><br>I have regenerated API keys, I have started new feeds, I have started new files, I am not sure what my issue is here but I very much look forward to solving it so I can move forward.
+            </p>
         </div>
+    </div>
+    
+    
 </body>
 
 </html>

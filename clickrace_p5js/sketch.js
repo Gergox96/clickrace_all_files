@@ -1,14 +1,8 @@
-
-//Written by William Luk
 // posts data to an Adafuit.io feed
-let url = '	https://io.adafruit.com/api/v2/Xplosivebum/feeds/testdata';
+let url = 'https://io.adafruit.com/api/v2/Xplosivebum/feeds/servos';
 
 var data = 0;
 var video;
-
-//let MAGNETOB;
-//function preload() {
-//  fontRegular = loadFont('assets/MAGNETOB.ttf');
 
 function setup() {
   createCanvas(1900,150);
@@ -61,6 +55,18 @@ function setup() {
     myButton7.style('background-color:red');
 }
 
+function startServos() {
+    data = 1;
+    console.log(data);
+    sendData(data);
+}
+
+function stopServos() {
+    data = 0;
+    console.log(data);
+    sendData(data);
+}
+
 function draw() {
     image(video);
 
@@ -100,22 +106,10 @@ function eraseBet() {
     rect (1020,110,150,25);
 }
 
-function startServos() {
-    data = 1;
-    console.log(data);
-    sendData(data);
-}
-
-function stopServos() {
-    data = 0;
-    console.log(data);
-    sendData(data);
-}
-
 function sendData(turnOn){
   let postData ={
     "value": turnOn,
-    "X-AIO-Key": "aio_xDpW81DDXBE1IMn1V21IWg9nxVye"
+    "X-AIO-Key": "aio_YsZH00pLfmfieVjoF4OPbd2b27Pk"
   };
   httpPost(url, 'json', postData, function(result){
     console.log(result);
